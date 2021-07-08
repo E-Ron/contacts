@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "first_name": "Guilbert",
+      "last_name": "Newlove",
+      "details": {
+        "phone": "911-698-3564",
+        "email": "gnewlove0@g.co"
+      }
+    },
+    {
+      "id": 2,
+      "first_name": "Kaia",
+      "last_name": "Evamy",
+      "details": {
+        "phone": "932-144-5701",
+        "email": "kevamy1@mapy.cz"
+      }
+    },
+    {
+      "id": 3,
+      "first_name": "Gale",
+      "last_name": "Wolfindale",
+      "details": {
+        "phone": "213-801-7236",
+        "email": "gwolfindale2@i2i.jp"
+      }
+    },
+    {
+      "id": 4,
+      "first_name": "Benita",
+      "last_name": "Woffenden",
+      "details": {
+        "phone": "340-574-0712",
+        "email": "bwoffenden3@meetup.com"
+      }
+    },
+    {
+      "id": 5,
+      "first_name": "Erica",
+      "last_name": "Wilkie",
+      "details": {
+        "phone": "411-656-8466",
+        "email": "ewilkie4@psu.edu"
+      }
+    },
+    {
+      "id": 6,
+      "first_name": "Corenda",
+      "last_name": "Aaron",
+      "details": {
+        "phone": "207-742-1062",
+        "email": "caaron5@techcrunch.com"
+      }
+    },
+    {
+      "id": 7,
+      "first_name": "Basia",
+      "last_name": "Courage",
+      "details": {
+        "phone": "614-579-5843",
+        "email": "bcourage6@amazonaws.com"
+      }
+    },
+    {
+      "id": 8,
+      "first_name": "Peterus",
+      "last_name": "Morrant",
+      "details": {
+        "phone": "536-430-6533",
+        "email": "pmorrant7@auda.org.au"
+      }
+    },
+    {
+      "id": 9,
+      "first_name": "Zora",
+      "last_name": "Frushard",
+      "details": {
+        "phone": "749-514-6480",
+        "email": "zfrushard8@comsenz.com"
+      }
+    }
+  ]
+}
