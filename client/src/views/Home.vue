@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <span class="addContact">
-      <input name="first_name" id="first_name" type="text" placeholder="first_name" v-model="newItem.first_name">
-      <input name="last_name" id="last_name" type="text" placeholder="last_name" v-model="newItem.last_name">
-      <input name="phone" id="phone" type="text" placeholder="phone" v-model="newItem.details.phone">
-      <input name="email" id="email" type="text" placeholder="email" v-model="newItem.details.email">
+      <input name="first_name" id="first_name" type="text" placeholder="first_name" v-model="newItem.first_name" autocomplete="off">
+      <input name="last_name" id="last_name" type="text" placeholder="last_name" v-model="newItem.last_name" autocomplete="off">
+      <input name="phone" id="phone" type="text" placeholder="phone" v-model="newItem.details.phone" autocomplete="off">
+      <input name="email" id="email" type="text" placeholder="email" v-model="newItem.details.email" autocomplete="off">
       <input type="button" value="zxxczxc" @click="addItem">
     </span>
     
@@ -56,6 +56,7 @@ export default {
         body: JSON.stringify(this.newItem)
       }).then(async (res) => {
         this.mock.push(await res.json())
+        this.newItem = { first_name: '', last_name: '', details: { phone: '', email: '' } }
       })
     },
   },

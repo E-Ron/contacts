@@ -16,9 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    // const user = JSON.stringify(req.fields)
     const user = req.body
-    console.log(user)
     if (user.hasOwnProperty('first_name') && user.hasOwnProperty('last_name')) {
         user.id = json[json.length - 1].id + 1 //i got too lazy with using uuid lib
         json.push(user)
