@@ -1,19 +1,13 @@
-# contacts
+# run client
 
-## Project setup
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
+cd ./client
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+# run server
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+cd ./server
+npm run dev
+```
