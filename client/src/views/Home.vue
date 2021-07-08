@@ -28,7 +28,7 @@ export default {
   name: 'Home',
   methods: {
     async deleteItem(key) {
-      if (confirm('1000-7?')) {
+      if (confirm('Delete contact?')) {
         await fetch(this.fetchLink + '/users/' + key, {
           method: 'DELETE'
         }).then(async (res) => {
