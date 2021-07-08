@@ -1,5 +1,15 @@
 <template>
   <div class="container">
+    <span class="addContact">
+      <input name="first_name" id="first_name" type="text" placeholder="first_name" v-model="newItem.first_name">
+      <input name="last_name" id="last_name" type="text" placeholder="last_name" v-model="newItem.last_name">
+      <input name="phone" id="phone" type="text" placeholder="phone" v-model="newItem.details.phone">
+      <input name="email" id="email" type="text" placeholder="email" v-model="newItem.details.email">
+      <input type="button" value="zxxczxc" @click="addItem">
+    </span>
+    
+
+
     <span v-for="i in mock" class="contact">
       <p>{{ i.first_name + ' ' + i.last_name }}</p>
       <button @click="deleteItem(i.id)">
@@ -11,11 +21,7 @@
     </span>
   </div>
 
-  <input name="first_name" id="first_name" type="text" placeholder="first_name" v-model="newItem.first_name">
-  <input name="last_name" id="last_name" type="text" placeholder="last_name" v-model="newItem.last_name">
-  <input name="phone" id="phone" type="text" placeholder="phone" v-model="newItem.details.phone">
-  <input name="email" id="email" type="text" placeholder="email" v-model="newItem.details.email">
-  <input type="button" value="zxxczxc" @click="addItem">
+  
 </template>
 
 <script>
@@ -77,7 +83,28 @@ export default {
 
 <style scoped lang="scss">
 .container {
+  .addContact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.25rem;
+    margin-bottom: 1.5rem;
 
+    input {
+      font-size: 0.6rem;
+      font-weight: 300;
+      padding: 0.25rem;
+      border-radius: 5px;
+      border: 1px solid gray;
+    }
+
+    input[type=button] {
+      grid-column: 1 / 3;
+      width: 80px;
+      justify-self: center;
+      cursor: pointer;
+    }
+  }
 
   .contact {
     border: 1px solid #222;
