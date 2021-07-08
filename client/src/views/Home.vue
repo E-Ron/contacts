@@ -5,11 +5,8 @@
       <input name="last_name" id="last_name" type="text" placeholder="last_name" v-model="newItem.last_name" autocomplete="off">
       <input name="phone" id="phone" type="text" placeholder="phone" v-model="newItem.details.phone" autocomplete="off">
       <input name="email" id="email" type="text" placeholder="email" v-model="newItem.details.email" autocomplete="off">
-      <input type="button" value="zxxczxc" @click="addItem">
+      <input type="button" value="Add contact" @click="addItem">
     </span>
-    
-
-
     <span v-for="i in mock" class="contact">
       <p>{{ i.first_name + ' ' + i.last_name }}</p>
       <button @click="deleteItem(i.id)">
@@ -101,7 +98,7 @@ export default {
 
     input[type=button] {
       grid-column: 1 / 3;
-      width: 80px;
+      width: max-content;
       justify-self: center;
       cursor: pointer;
     }

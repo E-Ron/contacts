@@ -4,12 +4,12 @@
       <p class="itemName">{{ mock.first_name + ' ' + mock.last_name }}</p>
       <span class="itemDetails" v-for="(i, key) in mock.details">
         <p>{{ key }}:</p>
-        <input type="text"  :value="i" />
+        <input type="text" @keyup.enter='updateItem(key, $event)' :value="i" />
         <button class="itemDetailsAdd" @click="deleteProp(key)">Delete</button>
       </span>
       <span class="itemAddings">
         <input type="text" v-model="propName" class="itemAddingsLabel" placeholder="Property name"/>
-        <input type="text" v-model="propValue" class="itemAddingsValue" placeholder="Property value"/>
+        <input type="text" v-model="propValue" @keyup.enter="updateItem" class="itemAddingsValue" placeholder="Property value"/>
         <button class="itemAddingsAdd" @click="updateItem">Add</button>
       </span>
     </span>
@@ -52,6 +52,23 @@ export default {
         this.propName = ''
         this.propValue = ''
       })
+    },
+    updateItem(key, event) {
+      fetch(this.fetchLink + '/users/update/' + this.$route.params.key, {
+        method: "POST",
+        body: JSON.stringify({
+          'propName': key,
+          'propValue': event.target.value
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      }).then( async (res) => {
+        this.mock = await res.json()
+        this.propName = ''
+        this.propValue = ''
+      })
+      // console.log(event.target.value)
     },
     deleteProp(key) {
       if (confirm(`delete ${key}?`)) {
